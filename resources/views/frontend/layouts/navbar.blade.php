@@ -53,7 +53,8 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <span class="fw-semibold d-block">
-                                        {{\Illuminate\Support\Facades\Auth::user()->name}}
+{{--                                        {{\Illuminate\Support\Facades\Auth::user()->name}}--}}
+                                        {{'User'}}
                                     </span>
                                     <small class="text-muted">User Frontend</small>
                                 </div>
