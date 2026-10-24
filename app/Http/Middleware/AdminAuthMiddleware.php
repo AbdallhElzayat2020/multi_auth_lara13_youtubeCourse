@@ -17,7 +17,6 @@ class AdminAuthMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
-
         $admin = Auth::guard('admin');
         if (!$admin->check()) {
             return redirect()->route('admin.login');
