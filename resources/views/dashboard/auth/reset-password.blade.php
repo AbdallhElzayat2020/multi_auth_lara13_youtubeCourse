@@ -7,10 +7,10 @@
     class="light-style customizer-hide"
     dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{asset('assets/frontend/')}}/"
+    data-assets-path="{{asset('assets/dashboard/')}}/"
     data-template="vertical-menu-template-free">
 
-@include('frontend.auth.layouts.head')
+@include('dashboard.auth.layouts.head')
 
 <body>
 <!-- Content -->
@@ -28,7 +28,7 @@
                     <div class="app-brand justify-content-center">
                         <a href="{{ route('home') }}" class="app-brand-link gap-2">
                           <span class="app-brand-logo demo">
-                                @include('frontend.auth.layouts.logo')
+                                @include('dashboard.auth.layouts.logo')
                           </span>
                             <span class="app-brand-text demo text-body fw-bolder">
                             Reset Password
@@ -39,7 +39,7 @@
                     <h4 class="mb-2">Reset Password? 🔒</h4>
 
                     <!-- Session Status -->
-                    <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('password.store') }}">
+                    <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('admin.password.store') }}">
                         @csrf
 
                         <!-- Password Reset Token -->
@@ -115,6 +115,6 @@
 <!-- / Content -->
 
 <!-- Core JS -->
-@include('frontend.auth.layouts.scripts')
+@include('dashboard.auth.layouts.scripts')
 </body>
 </html>

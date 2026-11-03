@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Notifications\EmailNotification;
 use Database\Factories\UserFactory;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -23,12 +23,11 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new EmailNotification($token));
     }
 
-
-    /* -- Send Verify Email via Mail with out Breeze  */
-//    public function SendEmailVerificationNotification($token): void
-//    {
-//        $this->notify(new EmailNotification($token));
-//    }
+    /* -- Send Verify Email via Mail with out Breeze */
+    //    public function SendEmailVerificationNotification($token): void
+    //    {
+    //        $this->notify(new EmailNotification($token));
+    //    }
 
     /**
      * Get the attributes that should be cast.

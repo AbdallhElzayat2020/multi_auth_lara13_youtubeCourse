@@ -7,10 +7,10 @@
     class="light-style customizer-hide"
     dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{asset('assets/frontend/')}}/"
+    data-assets-path="{{asset('assets/dashboard/')}}/"
     data-template="vertical-menu-template-free">
 
-@include('frontend.auth.layouts.head')
+@include('dashboard.auth.layouts.head')
 
 <body>
 <!-- Content -->
@@ -33,7 +33,7 @@
                     <div class="app-brand justify-content-center">
                         <a href="{{ route('home') }}" class="app-brand-link gap-2">
                           <span class="app-brand-logo demo">
-                                @include('frontend.auth.layouts.logo')
+                                @include('dashboard.auth.layouts.logo')
                           </span>
                             <span class="app-brand-text demo text-body fw-bolder">
                             Login
@@ -43,7 +43,7 @@
                     <!-- /Logo -->
                     <h4 class="mb-2">Welcome Back! 👋</h4>
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('admin.login') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             {{-- Email --}}
@@ -67,8 +67,8 @@
                         <div class="mb-3 form-password-toggle">
                             <div class="d-flex justify-content-between">
                                 <label class="form-label" for="password">Password</label>
-                                @if(Route::has('password.request'))
-                                    <a href="{{ route('password.request') }}">
+                                @if(Route::has('admin.password.request'))
+                                    <a href="{{ route('admin.password.request') }}">
                                         <small>Forgot Password?</small>
                                     </a>
                                 @endif
@@ -92,7 +92,7 @@
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="remember" required/>
+                                <input class="form-check-input" type="checkbox" id="remember" name="remember"/>
                                 <label class="form-check-label" for="remember"> Remember Me </label>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
 
                     <p class="text-center">
                         <span>New on our platform?</span>
-                        <a href="{{ route('register') }}">
+                        <a href="{{ route('admin.register') }}">
                             <span>Create an account</span>
                         </a>
                     </p>
@@ -117,6 +117,6 @@
 <!-- / Content -->
 
 <!-- Core JS -->
-@include('frontend.auth.layouts.scripts')
+@include('dashboard.auth.layouts.scripts')
 </body>
 </html>

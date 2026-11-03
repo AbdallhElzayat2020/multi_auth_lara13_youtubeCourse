@@ -7,10 +7,10 @@
     class="light-style customizer-hide"
     dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{asset('assets/frontend/')}}/"
+    data-assets-path="{{asset('assets/dashboard/')}}/"
     data-template="vertical-menu-template-free">
 
-@include('frontend.auth.layouts.head')
+@include('dashboard.auth.layouts.head')
 
 <body>
 <!-- Content -->
@@ -25,12 +25,11 @@
                 <div class="card-body">
 
 
-
                     <!-- Logo -->
                     <div class="app-brand justify-content-center">
                         <a href="{{ route('home') }}" class="app-brand-link gap-2">
                           <span class="app-brand-logo demo">
-                                @include('frontend.auth.layouts.logo')
+                                @include('dashboard.auth.layouts.logo')
                           </span>
                             <span class="app-brand-text demo text-body fw-bolder">
                             Forget Password
@@ -48,7 +47,7 @@
                     </div>
                     @endsession
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('password.email') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('admin.password.email') }}" method="POST">
                         @csrf
 
                         <!-- Email Address -->
@@ -71,7 +70,7 @@
                         <button class="btn btn-primary d-grid w-100">Email Password Reset Link</button>
                     </form>
                     <div class="text-center">
-                        <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center">
+                        <a href="{{ route('admin.login') }}" class="d-flex align-items-center justify-content-center">
                             <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
                             Back to login
                         </a>
@@ -86,6 +85,6 @@
 <!-- / Content -->
 
 <!-- Core JS -->
-@include('frontend.auth.layouts.scripts')
+@include('dashboard.auth.layouts.scripts')
 </body>
 </html>

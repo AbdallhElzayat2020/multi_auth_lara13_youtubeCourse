@@ -3,7 +3,6 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -35,7 +34,7 @@ class EmailNotification extends Notification
     {
         return (new MailMessage)
             ->line('Change Your Password.')
-            ->action('Reset', url('/reset-password/' . $this->token))
+            ->action('Reset', route('password.reset', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()]))
             ->line('This password reset link will expire in 60 minutes.');
     }
 

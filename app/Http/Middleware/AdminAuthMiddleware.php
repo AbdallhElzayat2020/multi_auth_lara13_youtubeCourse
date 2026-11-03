@@ -12,14 +12,14 @@ class AdminAuthMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param Closure(Request): (Response) $next
+     * @param  Closure(Request): (Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
 
-        $admin = Auth::guard('admin');
-        if (!$admin->check()) {
-            return redirect()->route('admin.login');
+        if (! Auth::guard('admin')->check()) {
+            return to_route('admin.login')
+                ->with('error', 'You must be logged in as an admin to access this page.');
         }
 
         return $next($request);

@@ -1,16 +1,15 @@
-@section('title', 'Register Page')
+@section('title', 'Register Page Backend')
     <!DOCTYPE html>
 
 
-<html
-    lang="en"
-    class="light-style customizer-hide"
-    dir="ltr"
-    data-theme="theme-default"
-    data-assets-path="{{asset('assets/frontend/')}}/"
-    data-template="vertical-menu-template-free">
+<html lang="en"
+      class="light-style customizer-hide"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="{{asset('assets/admin/')}}/"
+      data-template="vertical-menu-template-free">
 
-@include('frontend.auth.layouts.head')
+@include('dashboard.auth.layouts.head')
 
 <body>
 <!-- Content -->
@@ -28,7 +27,7 @@
                                 @include('frontend.auth.layouts.logo')
                           </span>
                             <span class="app-brand-text demo text-body fw-bolder">
-                            Register
+                            Register Back
                             </span>
                         </a>
                     </div>
@@ -36,7 +35,7 @@
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
                     <p class="mb-4">Make your app management easy and fun!</p>
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('register') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('admin.register') }}" method="POST">
                         @csrf
                         <!-- Name -->
                         <div class="mb-3">
@@ -122,6 +121,6 @@
 <!-- / Content -->
 
 <!-- Core JS -->
-@include('frontend.auth.layouts.scripts')
+@include('dashboard.layouts.scripts')
 </body>
 </html>

@@ -5,7 +5,7 @@
     lang="en"
     class="light-style layout-menu-fixed" dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{asset('assets/admin/')}}/"
+    data-assets-path="{{asset('assets/dashboard/')}}/"
     data-template="vertical-menu-template-free">
 
 @include('dashboard.layouts.head')

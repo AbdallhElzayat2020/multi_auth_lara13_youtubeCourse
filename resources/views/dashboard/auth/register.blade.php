@@ -7,10 +7,10 @@
     class="light-style customizer-hide"
     dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{asset('assets/frontend/')}}/"
+    data-assets-path="{{asset('assets/dashboard/')}}/"
     data-template="vertical-menu-template-free">
 
-@include('frontend.auth.layouts.head')
+@include('dashboard.auth.layouts.head')
 
 <body>
 <!-- Content -->
@@ -23,9 +23,9 @@
                 <div class="card-body">
                     <!-- Logo -->
                     <div class="app-brand justify-content-center">
-                        <a href="{{route('home')}}" class="app-brand-link gap-2">
+                        <a href="#" class="app-brand-link gap-2">
                           <span class="app-brand-logo demo">
-                                @include('frontend.auth.layouts.logo')
+                                @include('dashboard.auth.layouts.logo')
                           </span>
                             <span class="app-brand-text demo text-body fw-bolder">
                             Register
@@ -36,7 +36,7 @@
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
                     <p class="mb-4">Make your app management easy and fun!</p>
 
-                    <form id="formAuthentication" class="mb-3" action="{{ route('register') }}" method="POST">
+                    <form id="formAuthentication" class="mb-3" action="{{ route('admin.register') }}" method="POST">
                         @csrf
                         <!-- Name -->
                         <div class="mb-3">
@@ -108,7 +108,7 @@
 
                     <p class="text-center">
                         <span>Already have an account?</span>
-                        <a href="{{ route('login') }}">
+                        <a href="{{ route('admin.login') }}">
                             <span>Sign in instead</span>
                         </a>
                     </p>

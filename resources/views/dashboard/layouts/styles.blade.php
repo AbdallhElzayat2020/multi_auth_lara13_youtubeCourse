@@ -1,6 +1,6 @@
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="{{asset('assets/admin/')}}/img/favicon/favicon.ico"/>
+<link rel="icon" type="image/x-icon" href="{{asset('assets/dashboard/')}}/img/favicon/favicon.ico"/>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -10,21 +10,21 @@
     rel="stylesheet"/>
 
 <!-- Icons. Uncomment required icon fonts -->
-<link rel="stylesheet" href="{{asset('assets/admin/')}}/vendor/fonts/boxicons.css"/>
+<link rel="stylesheet" href="{{asset('assets/dashboard/')}}/vendor/fonts/boxicons.css"/>
 
 <!-- Core CSS -->
-<link rel="stylesheet" href="{{asset('assets/admin/')}}/vendor/css/core.css" class="template-customizer-core-css"/>
-<link rel="stylesheet" href="{{asset('assets/admin/')}}/vendor/css/theme-default.css" class="template-customizer-theme-css"/>
-<link rel="stylesheet" href="{{asset('assets/admin/')}}/css/demo.css"/>
+<link rel="stylesheet" href="{{asset('assets/dashboard/')}}/vendor/css/core.css" class="template-customizer-core-css"/>
+<link rel="stylesheet" href="{{asset('assets/dashboard/')}}/vendor/css/theme-default.css" class="template-customizer-theme-css"/>
+<link rel="stylesheet" href="{{asset('assets/dashboard/')}}/css/demo.css"/>
 
 <!-- Vendors CSS -->
-<link rel="stylesheet" href="{{asset('assets/admin/')}}/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"/>
+<link rel="stylesheet" href="{{asset('assets/dashboard/')}}/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"/>
 
-<link rel="stylesheet" href="{{asset('assets/admin/')}}/vendor/libs/apex-charts/apex-charts.css"/>
+<link rel="stylesheet" href="{{asset('assets/dashboard/')}}/vendor/libs/apex-charts/apex-charts.css"/>
 
 <!-- Page CSS -->
 
 <!-- Helpers -->
-<script src="{{asset('assets/admin/')}}/vendor/js/helpers.js"></script>
+<script src="{{asset('assets/dashboard/')}}/vendor/js/helpers.js"></script>
 
-<script src="{{asset('assets/admin/')}}/js/config.js"></script>
+<script src="{{asset('assets/dashboard/')}}/js/config.js"></script>

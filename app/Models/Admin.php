@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Notifications\AdminPasswordNotification;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
@@ -12,11 +12,15 @@ use Illuminate\Notifications\Notifiable;
 
 #[Fillable(['name', 'email', 'password', 'phone', 'status', 'avatar'])]
 #[Hidden(['password', 'remember_token'])]
-class Admin extends Authenticatable implements MustVerifyEmail
+class Admin extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use Notifiable;
 
+    public function sendPasswordResetNotification($token): void
+    {
+        $this->notify(new AdminPasswordNotification($token));
+    }
 
     /**
      * Get the attributes that should be cast.

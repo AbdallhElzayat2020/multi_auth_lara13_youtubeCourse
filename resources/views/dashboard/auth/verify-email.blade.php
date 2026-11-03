@@ -6,10 +6,10 @@
     class="light-style customizer-hide"
     dir="ltr"
     data-theme="theme-default"
-    data-assets-path="{{ asset('assets/frontend/') }}/"
+    data-assets-path="{{ asset('assets/dashboard/') }}/"
     data-template="vertical-menu-template-free">
 
-@include('frontend.auth.layouts.head')
+@include('dashboard.auth.layouts.head')
 
 <body>
 <!-- Content -->
@@ -22,9 +22,9 @@
 
                     <!-- Logo -->
                     <div class="app-brand justify-content-center">
-                        <a href="{{ route('home') }}" class="app-brand-link gap-2">
+                        <a href="{{ route('admin.dashboard') }}" class="app-brand-link gap-2">
                             <span class="app-brand-logo demo">
-                                @include('frontend.auth.layouts.logo')
+                                @include('dashboard.auth.layouts.logo')
                             </span>
                             <span class="app-brand-text demo text-body fw-bolder">
                                 Verify Email
@@ -46,14 +46,14 @@
                     @endif
 
                     <div class="mt-4 d-flex flex-column gap-3">
-                        <form method="POST" action="{{ route('verification.send') }}">
+                        <form method="POST" action="{{ route('admin.verification.send') }}">
                             @csrf
                             <button type="submit" class="btn btn-primary d-grid w-100">
                                 Resend Verification Email
                             </button>
                         </form>
 
-                        <form method="POST" action="{{ route('logout') }}">
+                        <form method="POST" action="{{ route('admin.logout') }}">
                             @csrf
                             <button type="submit" class="btn btn-outline-secondary d-grid w-100">
                                 Log Out
@@ -70,6 +70,6 @@
 <!-- / Content -->
 
 <!-- Core JS -->
-@include('frontend.auth.layouts.scripts')
+@include('dashboard.auth.layouts.scripts')
 </body>
 </html>

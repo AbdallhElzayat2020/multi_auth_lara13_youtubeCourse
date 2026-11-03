@@ -1,16 +1,16 @@
 <!-- build:js assets/vendor/js/core.js -->
-<script src="{{asset('assets/frontend/')}}/vendor/libs/jquery/jquery.js"></script>
-<script src="{{asset('assets/frontend/')}}/vendor/libs/popper/popper.js"></script>
-<script src="{{asset('assets/frontend/')}}/vendor/js/bootstrap.js"></script>
-<script src="{{asset('assets/frontend/')}}/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="{{asset('assets/dashboard')}}/vendor/libs/jquery/jquery.js"></script>
+<script src="{{asset('assets/dashboard')}}/vendor/libs/popper/popper.js"></script>
+<script src="{{asset('assets/dashboard')}}/vendor/js/bootstrap.js"></script>
+<script src="{{asset('assets/dashboard')}}/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<script src="{{asset('assets/frontend/')}}/vendor/js/menu.js"></script>
+<script src="{{asset('assets/dashboard')}}/vendor/js/menu.js"></script>
 <!-- endbuild -->
 
 <!-- Vendors JS -->
 
 <!-- Main JS -->
-<script src="{{asset('assets/frontend/')}}/js/main.js"></script>
+<script src="{{asset('assets/dashboard')}}/js/main.js"></script>
 
 <!-- Page JS -->
 
